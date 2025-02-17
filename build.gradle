@@ -49,7 +49,7 @@ jib {
         jvmFlags = ["-Xshare:auto", "-XX:TieredStopAtLevel=1", "-XX:CICompilerCount=1", "-XX:+UseSerialGC", "-Xmx512m"]
     }
     to {
-        image = "ghcr.io/nov1n/remarkable-pocket"
+        image = "ghcr.io/wizzro/remarkable-pocket"
         tags = [project.version.toString()]
     }
     extraDirectories {
