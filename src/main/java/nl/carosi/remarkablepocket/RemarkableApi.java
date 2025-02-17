@@ -125,7 +125,9 @@ public class RemarkableApi {
 
     public Path download(String articleName) {
         exec(RMAPI_EXECUTABLE, "-ni", "get", rmStorageDir + articleName);
-        exec("mv", articleName + ".rmdoc", workDir + "/" + articleName + ".zip");
+	exec("pwd");
+	exec("ls");
+        exec("mv", articleName + ".zip", workDir + "/" + articleName + ".zip");
         return Path.of(workDir, articleName + ".zip");
     }
 
@@ -158,6 +160,7 @@ public class RemarkableApi {
 
     public void delete(String articleName) {
         exec(RMAPI_EXECUTABLE, "-ni", "rm", rmStorageDir + articleName);
+	//LOG.debug("On supprime: {} {}.", rmStorageDir, articleName);
     }
 
     public void createDir(String path) {
