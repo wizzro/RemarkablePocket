@@ -127,7 +127,7 @@ public class RemarkableApi {
         exec(RMAPI_EXECUTABLE, "-ni", "get", rmStorageDir + articleName);
 	exec("pwd");
 	exec("ls");
-        exec("mv", articleName + ".zip", workDir + "/" + articleName + ".zip");
+        exec("mv", articleName + ".rmdoc", workDir + "/" + articleName + ".zip");
         return Path.of(workDir, articleName + ".zip");
     }
 
